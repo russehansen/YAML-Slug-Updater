@@ -126,15 +126,6 @@ After:
 
 - TRIGGER quickbase[NEWslug01] record on_update -> a:
 
-🧪 Future Enhancements (Planned)
-
-Mapping for table IDs (e.g., <bqr9x7pve> → new IDs)
-
-Automatic detection of slugs used in YAMLs
-
-Web UI wrapper for non-technical users
-
-Automated Quickbase API import/export integration
 
 🤝 Contributing
 
