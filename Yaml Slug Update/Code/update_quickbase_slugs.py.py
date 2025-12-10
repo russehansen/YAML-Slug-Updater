@@ -54,7 +54,9 @@ def process_file(path: Path, slug_map: dict[str, str]) -> tuple[str, int]:
     return text, total_replacements
 
 
-def update_directory(mapping_file: Path, input_dir: Path, output_dir: Path, dry_run: bool = False) -> None:
+def update_directory(
+    mapping_file: Path, input_dir: Path, output_dir: Path, dry_run: bool = False
+) -> None:
     if not mapping_file.is_file():
         raise SystemExit(f"Mapping file not found: {mapping_file}")
 
@@ -92,7 +94,9 @@ def update_directory(mapping_file: Path, input_dir: Path, output_dir: Path, dry_
                 out_path.write_text(new_text, encoding="utf-8")
                 print(f"Updated {rel_path} ({replacements} replacements)")
 
-    print(f"\nProcessed {total_files} file(s), {total_replacements} total replacement(s).")
+    print(
+        f"\nProcessed {total_files} file(s), {total_replacements} total replacement(s)."
+    )
     if dry_run:
         print("Dry run complete. No files were written.")
 
